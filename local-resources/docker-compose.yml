@@ -1,0 +1,40 @@
+version: '3'
+services:
+  consul:
+    image: consul:latest
+    command: agent -server -dev -client 0.0.0.0 -log-level err
+    ports:
+    - 8500:8500
+    healthcheck:
+      test: "exit 0"
+
+  mongo:
+    image: mongo:3.6.3
+    ports:
+    - 27017:27017
+    command: --smallfiles
+
+  mongo-init:
+    build: ./mongo-init
+    links:
+      - mongo
+
+  redis:
+    image: redis:latest
+    ports:
+    - 6379:6379
+
+  spring-boot-app:
+    image: spring-boot-app-impl:latest
+    ports:
+    - 8080:8080
+    - 5510:5555
+    links:
+    - redis
+    - mongo
+    - consul
+    environment:
+    - JAVA_OPTS=-Xmx1024m -Xms256m -Xdebug -agentlib:jdwp=transport=dt_socket,address=5555,server=y,suspend=n
+    - CONFIGURATION_SERVICE_HOST=consul
+    - CONFIGURATION_SERVICE_PORT=8500
+    - ENV=local

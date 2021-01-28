@@ -1,12 +1,11 @@
-package com.bbva.us.prime.service.loan.v3.service;
+package com.think.big.springbootapp.service;
 
-import com.bbva.us.prime.dao.loan.credittailor.CreditTailorEntity;
+import com.think.big.springbootapp.domain.CustomerEntity;
 
-public interface CreditTailorEntityService {
+public interface CustomerEntityService {
 
-    CreditTailorEntity getCreditTailorByUuid(String ctUuid, String partnerId);
+    CustomerEntity getCustomerByUuid(String ctUuid);
 
-    CreditTailorEntity saveCreditTailorEntity(CreditTailorEntity creditTailorEntity);
+    CustomerEntity saveCustomerEntity(CustomerEntity customerEntity);
 
-    Long generateCTApplicationId();
 }

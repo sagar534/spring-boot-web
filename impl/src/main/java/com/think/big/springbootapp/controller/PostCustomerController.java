@@ -21,8 +21,9 @@ public class PostCustomerController {
     @Autowired
     PostCustomerInfoManager postCustomerInfoManager;
     @PostMapping(path = "/customer-info", consumes = "application/json", produces = "application/json")
-    public CompletableFuture<Response<CustomerInfoResponse>> postCreditTailor(@RequestBody @Valid CustomerInfoRequest request) {
+    public CustomerInfoResponse postCreditTailor(@RequestBody @Valid CustomerInfoRequest request) {
 
-        return ResponseAsync.supplyAsync(() -> postCustomerInfoManager.postCustomer(request));
+//        return ResponseAsync.supplyAsync(() -> postCustomerInfoManager.postCustomer(request));
+        return postCustomerInfoManager.postCustomer(request);
     }
 }

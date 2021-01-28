@@ -10,13 +10,12 @@ import java.util.UUID;
 public class CustomerIdUtil {
 
     @Autowired
-    CustomerProperties loansProperties;
-
-    private static final String CREDIT_TAILOR_UUID_PREFIX = "CT-";
+    CustomerProperties customerProperties;
 
 
-    public String generateCtUUId() {
-        return new StringBuilder(CREDIT_TAILOR_UUID_PREFIX)
+
+    public String generateCtUUId(String prefix) {
+        return new StringBuilder(prefix)
                 .append(UUID.randomUUID()).toString();
     }
 

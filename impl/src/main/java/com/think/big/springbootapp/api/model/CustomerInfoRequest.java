@@ -17,26 +17,26 @@ public class CustomerInfoRequest implements Serializable {
     @Size(max = 25)
     public String middleName;
 
-    @NotNull
-    @Size(max = 20)
-    public String lastName;
-
-    @Valid
-    public String socialSecurityNumber;
-
-    @NotNull
-    @Valid
-    public BirthData birthData;
-
-    @NotNull
-    @Valid
-    public List<AddressLong> addresses;
-
-    @NotNull
-    @Valid
-    public List<ContactDetail> contactDetails;
-
-    @NotNull
-    @Valid
-    public Residence residence;
+//    @NotNull
+//    @Size(max = 20)
+//    public String lastName;
+//
+//    @Valid
+//    public String socialSecurityNumber;
+//
+//    @NotNull
+//    @Valid
+//    public BirthData birthData;
+//
+//    @NotNull
+//    @Valid
+//    public List<AddressLong> addresses;
+//
+//    @NotNull
+//    @Valid
+//    public List<ContactDetail> contactDetails;
+//
+//    @NotNull
+//    @Valid
+//    public Residence residence;
 }

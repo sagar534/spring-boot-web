@@ -9,13 +9,12 @@ import java.util.UUID;
 @PropertySource("classpath:customerProperties.properties")
 public class CustomerProperties {
 
-    private static final String CREDIT_TAILOR_UUID_PREFIX = "CT-";
+    private static final String CUSTOMER_ID_PREFIX = "CO-";
 
 
-    public String getCreditTailorChannel() {
+    public String getCustomerIdPrefix() {
 //        return ctConsulConfigService.getProperty(CT_CHANNEL) != null ? ctConsulConfigService.getProperty(CT_CHANNEL) : env.getProperty(CT_CHANNEL);
-        return new StringBuilder(CREDIT_TAILOR_UUID_PREFIX)
-                .append(UUID.randomUUID()).toString();
+        return CUSTOMER_ID_PREFIX;
     }
 
 

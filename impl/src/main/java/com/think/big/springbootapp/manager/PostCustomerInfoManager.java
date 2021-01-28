@@ -7,7 +7,7 @@ import com.think.big.springbootapp.util.Response;
 
 public interface PostCustomerInfoManager {
 
-    Response<CustomerInfoResponse> postCustomer(CustomerInfoRequest request);
+    CustomerInfoResponse postCustomer(CustomerInfoRequest request);
 
 
 }

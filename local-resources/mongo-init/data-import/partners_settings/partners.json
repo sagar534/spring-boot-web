@@ -1,0 +1,156 @@
+[
+  {
+    "_id": "app.paas.simple.dev",
+    "_class": "com.bbva.arch.us.payments.partners.repository.model.PartnersEntity",
+    "name": "SIMPLE",
+    "achConfigurations": [
+      {
+        "secCode": "WEB",
+        "achType": "PULL",
+        "daysToProcess": 0,
+        "achSpeed": "SAME_DAY",
+        "processor": {
+          "identification": "BBVAOAPI",
+          "name": "OPENAPI",
+          "fileId": 2
+        },
+        "originatorDefault": {
+          "identification": "1820634718",
+          "name": "SIMPLE",
+          "originatingDFI": "06200118",
+          "description": "FUNDS XFER"
+        }
+      },
+      {
+        "secCode": "WEB",
+        "achType": "PUSH",
+        "daysToProcess": 0,
+        "achSpeed": "SAME_DAY",
+        "processor": {
+          "identification": "BBVAOAPI",
+          "name": "OPENAPI",
+          "fileId": 2
+        },
+        "originatorDefault": {
+          "identification": "1820634718",
+          "name": "SIMPLE",
+          "originatingDFI": "06200118",
+          "description": "FUNDS XFER"
+        }
+      },
+      {
+        "secCode": "CCD",
+        "achType": "PUSH",
+        "daysToProcess": 0,
+        "achSpeed": "SAME_DAY",
+        "processor": {
+          "identification": "BBVAOAPI",
+          "name": "OPENAPI",
+          "fileId": 2
+        },
+        "originatorDefault": {
+          "identification": "2820634718",
+          "name": "SIMPLE",
+          "originatingDFI": "06200118",
+          "description": "FUNDS XFER"
+        }
+      }
+    ],
+    "visaConfiguration": {
+      "enabledPull": true,
+      "businessApplicationIdPull": "FD",
+      "enabledPush": true,
+      "businessApplicationIdPush": "FD",
+      "cardAcceptorId": "BBVAOPEN",
+      "cardAcceptorName": "BBVA Open Platform",
+      "cardAcceptorAddress": {
+        "city": "San Francisco",
+        "stateCode": "CA",
+        "zipCode": "94105",
+        "country": "USA",
+        "address": "Alcatraz St."
+      },
+      "merchantCategoryCode": "6012"
+    },
+    "alnovaConfiguration": {
+      "thirdPartyId": "061",
+      "costCenter": "000087232",
+      "branchCode": "0232",
+      "managementSectorCode": "01",
+      "customerAccountCode": "00010232",
+      "bankNumber": "077",
+      "officerCode": "87887",
+      "accountProducts": [
+        {
+          "productCode": "02",
+          "productName": "PROTECTED_GOALS_VIP",
+          "subproductCode": "0101",
+          "originationMethod": "04",
+          "primary": true
+        },
+        {
+          "productCode": "02",
+          "productName": "PROTECTED_GOALS",
+          "subproductCode": "0102",
+          "originationMethod": "04",
+          "primary": false
+        },
+        {
+          "productCode": "02",
+          "productName": "SIMPLE_CHECKING",
+          "subproductCode": "0103",
+          "originationMethod": "04",
+          "primary": false
+        },
+        {
+          "productCode": "02",
+          "productName": "SIMPLE_CHECKING2",
+          "subproductCode": "0031",
+          "originationMethod": "04",
+          "primary": false
+        }
+      ],
+      "systemTypes": [
+        {
+          "value": "02C021",
+          "name": "INDIVIDUAL",
+          "primary": true
+        }
+      ],
+      "statementIndexValues": [
+        {
+          "index": "DCTSMPL",
+          "format": "INDIVIDUAL"
+        }
+      ]
+    },
+    "accounts": [
+      {
+        "accountNumber": "AYABeEX1XCSqW5q4rF6G62bV0x4AAAABAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTE6MzQxNjg3NzcxODIzOmtleS8zYTlkZjRmMS04NzNlLTRmY2MtYWE0Zi02YjI3YjQxMmUxOGQAuAECAQB4iVJ7ahuoMlnRgevKFsoUuIcjHWcXVEFj6oSN6TaCM4oBmE0TAD6rJdVdt++kNMnftgAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDL9kAu6Ka97J8JMyYwIBEIA7vOG8POeLQEcW9h68PFtfPQfKMTnr0hJ1ko5tU2u609mItDcrDlZcYtjfKP0bBP0ndhrJAsJfQ+Sk/ywCAAAAAAwAABAAAAAAAAAAAAAAAAAA9/pzF9kWttBjZue+a4H3HP////8AAAABAAAAAAAAAAAAAAABAAAACm0orXpWgoEEVFN101u3v/sYkN70HgOi6uaO",
+        "accountType": {
+          "_id": "CUSTODIAL_ACCOUNT"
+        }
+      }
+    ],
+    "partnerTypeId": "WHITE_LABEL",
+    "loanConfiguration": {
+      "includeOAORedirectUrl": true,
+      "affiliateId": "LT1",
+      "servicingEnabled": true
+    },
+    "pilotConfiguration": {
+      "pilotPhase": true,
+      "limits": {
+        "accountsLimit": 0,
+        "customersLimit": 0,
+        "businessesLimit": 0,
+        "cardsPullLimit": 10000,
+        "cardsPushLimit": 10000
+      }
+    },
+    "kycRequired": true,
+    "kycForeignException": false,
+    "docReview": false,
+    "activeDowngradeToCheck": true
+  }
+]

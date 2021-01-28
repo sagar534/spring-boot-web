@@ -1,0 +1,11 @@
+post-customer-info:
+  methods: POST
+  path: /api/v3/customer-info
+
+get-customer-info:
+  methods: GET
+  path: /api/v3/customer-info/*
+
+patch-customer-info:
+  methods: PATCH
+  path: /api/v3/customer-info/*
